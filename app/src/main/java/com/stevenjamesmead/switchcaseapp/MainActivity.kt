@@ -85,6 +85,12 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 
             Text(text = "Update")
         }
+        Button(
+            onClick = { switchCaseMessage = switchCase(userMessage) },
+            modifier = Modifier.fillMaxWidth()) {
+
+            Text(text = "Clear")
+        }
 
         SwitchCaseText(
             text = switchCaseMessage,
@@ -95,6 +101,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
             text = switchCaseMessage,
             modifier = Modifier.fillMaxWidth().border(width = 1.dp, color = Color.DarkGray)
         )
+
     }
 }
 
